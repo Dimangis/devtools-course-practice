@@ -1,14 +1,13 @@
-// Copyright 2022 Shatalin Dmitrii
+// Copyright 2022 Mustafaev Dmitry
 
-#include <stdlib.h>
-#include <stdio.h>
+#include <iostream>
 #include <string>
 
-#include "include/alimov_mike_ceacer_cifir_application.h"
+#include "include/ceacer_cifir_app.h"
 
 int main(int argc, const char** argv) {
-    Application app;
-    std::string output = app(argc, argv);
-    printf("%s\n", output.c_str());
-    return 0;
+  CLPApplication app;
+  std::string output = app(argc, argv);
+  std::cout << output << std::endl;
+  return 0;
 }
