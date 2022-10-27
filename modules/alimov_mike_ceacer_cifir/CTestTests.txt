@@ -22,34 +22,34 @@ set_tests_properties (${prefix}_get_help PROPERTIES
 
 add_test(
     NAME ${prefix}_test1
-    COMMAND ${APPLICATION} -t1 1 1 2 
+    COMMAND ${APPLICATION} -t1 QWERTYUIOASDFGHJKLZXCVBNM
 )
 set_tests_properties (${prefix}_test1 PROPERTIES
-    PASS_REGULAR_EXPRESSION "1\nsuccess"
+    PASS_REGULAR_EXPRESSION "TZHUWBXLRDVGIJKMNOCAFYEQP\nsuccess"
     LABELS "${MODULE}")
 
 add_test(
     NAME ${prefix}_test2
-    COMMAND ${APPLICATION} -t2 1 1 2
+    COMMAND ${APPLICATION} -t2 TZHUWBXLRDVGIJKMNOCAFYEQP
 )
 set_tests_properties (${prefix}_test2 PROPERTIES
-    PASS_REGULAR_EXPRESSION "1\nsuccess"
+    PASS_REGULAR_EXPRESSION "QWERTYUIOASDFGHJKLZXCVBNM\nsuccess"
     LABELS "${MODULE}")
 
 add_test(
     NAME ${prefix}_test3
-    COMMAND ${APPLICATION} -t3 1 1 2
+    COMMAND ${APPLICATION} -t3 TEST
 )
 set_tests_properties (${prefix}_test3 PROPERTIES
-    PASS_REGULAR_EXPRESSION "1\nsuccess"
+    PASS_REGULAR_EXPRESSION "WHVW\nsuccess"
     LABELS "${MODULE}")
 
 add_test(
     NAME ${prefix}_test4
-    COMMAND ${APPLICATION} -t4 1 1 2
+    COMMAND ${APPLICATION} -t4 HELLO WORLD
 )
 set_tests_properties (${prefix}_test4 PROPERTIES
-    PASS_REGULAR_EXPRESSION "2\nsuccess"
+    PASS_REGULAR_EXPRESSION "KHOOR ZRUOG\nsuccess"
     LABELS "${MODULE}")
 
 

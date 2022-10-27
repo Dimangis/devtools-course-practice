@@ -25,26 +25,36 @@ std::string CLPApplication::operator()(int argc, const char** argv) {
   int i = 1;
 
   if (std::string(argv[i]) == "--test1" || std::string(argv[i]) == "-t1") {
-
-    os << 123;
+    CaesarCipher z;
+    string a = argv[2];
+    // EXPECT_EQ(z.encrypt(a, 3), "TZHUWBXLRDVGIJKMNOCAFYEQP");
+    os << z.encrypt(a, 3);
     std::cout << os.str() << std::endl;
     return "success";
   }
   if (std::string(argv[i]) == "--test2" || std::string(argv[i]) == "-t2") {
-
-    os << 123;
+    CaesarCipher z;
+    string a = argv[2];
+    // EXPECT_EQ(z.decrypt(a, 3), "QWERTYUIOASDFGHJKLZXCVBNM");
+    os << z.decrypt(a, 3);
     std::cout << os.str() << std::endl;
     return "success";
   }
   if (std::string(argv[i]) == "--test3" || std::string(argv[i]) == "-t3") {
-
-    os << 123;
+    CaesarCipher z;
+    string a = argv[2];
+    // EXPECT_EQ(z.encrypt(a, 3), "WHVW");
+    os << z.encrypt(a, 3);
     std::cout << os.str() << std::endl;
     return "success";
   }
   if (std::string(argv[i]) == "--test4" || std::string(argv[i]) == "-t4") {
-
-    os << 123;
+    CaesarCipher z;
+    string a = argv[2];
+    a += ' ';
+    a += argv[3];
+    // EXPECT_EQ(z.encrypt(a, 3), "KHOOR ZRUOG");
+    os << z.encrypt(a, 3);
     std::cout << os.str() << std::endl;
     return "success";
   }
@@ -52,8 +62,7 @@ std::string CLPApplication::operator()(int argc, const char** argv) {
 }
 
 std::string CLPApplication::help() {
-  std::string help =
-      "This program considers the integral";
+  std::string help = "This program considers the integral";
   return help;
 }
 
